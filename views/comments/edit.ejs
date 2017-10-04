@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+
+<div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <h1>Edit Comment</h1>
+            </div>
+            <div class="col-md-4">
+                <form action="/teachers/<%= teacher_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <input class="form-control" type="text" name="comment[text]" placeholder="name" value="<%= comment.text %>">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Submit!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<% include ../partials/footer %>

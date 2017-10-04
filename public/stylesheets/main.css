@@ -1,0 +1,9 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 5rem;
+}
+
+h1 .material-icons {
+    vertical-align: middle;
+    font-size: 48px;
+}
