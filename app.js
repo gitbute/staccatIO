@@ -18,10 +18,19 @@ var commentRoutes = require("./routes/comments"),
 
 //BECAUSE: DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
 mongoose.Promise = global.Promise;
+
 // DEPRECATED: mongoose.connect("mongodb://localhost/staccatio");
-mongoose.connect("mongodb://localhost/staccatio", {
+
+//LOCAL DB:
+// mongoose.connect("mongodb://localhost/staccatio", {
+//     useMongoClient: true
+// });
+
+mongoose.connect("mongodb://michi:staccatio@ds163494.mlab.com:63494/staccatio", {
     useMongoClient: true
 });
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
